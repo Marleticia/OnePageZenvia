@@ -8,7 +8,7 @@ ZEN_LIGHT_BG = "#F8F8F8"    # Fundo quase branco
 ZEN_LIGHT_BLUE_BG = "#E8F0FE" # Um azul super claro para seções de destaque
 
 st.set_page_config(
-    page_title="Zenvia Tech | Comunicação que gera resultado",
+    page_title="Zenvia: Sua Próxima Conversa com o Crescimento!",
     page_icon="👋",
     layout="centered",
     initial_sidebar_state="collapsed"
@@ -238,7 +238,7 @@ set_zenvia_style()
 # AJUSTADO COM OS DADOS QUE VOCÊ FORNECEU
 diretor_nome = "Michael Bruno de Lima"
 empresa_dele = "Zenvia Tech"
-segmento_empresa = "Marketing e Customer Success"
+segmento_empresa = "Marketing e Customer Success" # Embora não seja mais usado diretamente, mantemos a variável
 seu_linkedin_url = "https://www.linkedin.com/in/maria-let%C3%ADcia-sousa-335bb9154/" # Seu perfil do LinkedIn
 seu_email = "maarinnolasco@gmail.com" # Seu e-mail de contato
 seu_nome = "Maria Leticia Sousa" # Para o footer
@@ -255,122 +255,42 @@ st.markdown(f"""
 # Hero Section (Título personalizado e chamada vibrante)
 st.markdown(f"""
 <div class="zen-hero">
-    <h1>{diretor_nome}, e se a {empresa_dele} tivesse superpoderes de comunicação?</h1>
-    <p>A gente sabe que o futuro das vendas e do marketing está nas conversas que engajam. E a Zenvia tem o mapa da mina para você escalar isso, sem complicação.</p>
-    <a href="#agendamento" class="zen-btn-schedule">Agendar um Bate-Papo Transformador</a>
+    <h1>Zenvia Tech | Comunicação que gera resultado</h1>
+    <p>Soluções multicanal para escalar o relacionamento com leads e clientes sem perder agilidade, personalização e performance.</p>
+    <a href="#agendamento" class="zen-btn-schedule">SEU MELHOR HORÁRIO PARA UM BATE-PAPO</a>
 </div>
 """, unsafe_allow_html=True)
 
-# A Dor (Humanizado e com a sua voz)
+# 🧠 2. Problema
 st.markdown(f"""
 <section class="zen-section">
-    <h2>{diretor_nome}, a gente sabe que desafios te tiram o sono...</h2>
-    <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 40px auto; color: #555;">No ritmo alucinante do mercado de hoje, engajar e encantar clientes é uma arte (e uma ciência!). Se você está buscando soluções para:</p>
-    <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; text-align: left; font-size: 1.15em; color: #444; margin: 0 auto; max-width: 800px;">
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Dar um chega pra lá na baixa conversão de leads?</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Acabar com os gargalos no atendimento ao cliente?</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Personalizar a comunicação em escala, mas sem perder o toque humano?</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Transformar o marketing e vendas da {empresa_dele} em uma máquina de resultados?</li>
-    </ul>
-    <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 50px auto 0 auto; color: #555;">Se a resposta é sim para alguma delas, a gente tem uma conversa que vai te interessar.</p>
-</section>
-""", unsafe_allow_html=True)
-
-# A Solução Zenvia (Com a pegada do PDF Drivin nos "poderes" mas focada na Zenvia)
-st.markdown(f"""
-<section class="zen-section bg-light">
-    <h2>Como a Zenvia empodera a {empresa_dele} a crescer?</h2>
-    <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 50px auto; color: #555;">Com a gente, a <strong>{empresa_dele}</strong> vai conseguir:</p>
-
-    <div class="zen-grid">
-        <div class="zen-item">
-            <img src="https://img.icons8.com/ios-filled/100/007AFF/bot.png" alt="Chatbot Icon">
-            <h4>Atendimento que nunca dorme (e resolve!)</h4>
-            <p>Seus clientes atendidos 24/7 por chatbots inteligentes, liberando sua equipe para focar no que realmente faz a diferença. <br>É **agilidade** na veia!</p>
-        </div>
-        <div class="zen-item">
-            <img src="https://img.icons8.com/ios-filled/100/007AFF/speech-bubble.png" alt="Speech Bubble Icon">
-            <h4>Conversas que vendem e fidelizam</h4>
-            <p>Comunicação super personalizada via WhatsApp, SMS, e-mail e voz, criando experiências que os clientes amam (e compram de novo!). <br>É **engajamento** de verdade!</p>
-        </div>
-        <div class="zen-item">
-            <img src="https://img.icons8.com/ios-filled/100/007AFF/target.png" alt="Target Icon">
-            <h4>Leads quentes na sua mão (e em escala!)</h4>
-            <p>Automatize a qualificação de leads, entregando oportunidades "no ponto" para o seu time de vendas. <br>É **eficiência** máxima!</p>
-        </div>
-        <div class="zen-item">
-            <img src="https://img.icons8.com/ios-filled/100/007AFF/flow-chart.png" alt="Flow Chart Icon">
-            <h4>Visão 360º para decisões certeiras</h4>
-            <p>Integre todos os seus canais e tenha uma visão completa do cliente para tomar decisões estratégicas que impulsionam o crescimento. <br>É **controle total**!</p>
-        </div>
+    <h2>🧠 Problema: Você já deve ter vivido isso...</h2>
+    <div style="font-size: 1.2em; max-width: 800px; margin: 0 auto 40px auto; color: #555;">
+        <ul style="list-style: none; padding: 0; text-align: left;">
+            <li style="margin-bottom: 15px;"><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Volume crescente de leads, mas conversão travada.</li>
+            <li style="margin-bottom: 15px;"><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Equipes sobrecarregadas, processos manuais e pouco escaláveis.</li>
+            <li style="margin-bottom: 15px;"><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Comunicação fragmentada entre marketing, vendas e atendimento.</li>
+            <li style="margin-bottom: 15px;"><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">•</span> Ferramentas que não se conversam e dados soltos que viram gargalo.</li>
+        </ul>
     </div>
-</section>
-""", unsafe_allow_html=True)
-
-# Cases de Sucesso (mantive os dados, mas com a linguagem mais leve)
-st.markdown(f"""
-<section class="zen-section">
-    <h2>Quem já está virando o jogo com a Zenvia?</h2>
-    <div class="zen-grid">
-        <div class="zen-item">
-            <img src="https://via.placeholder.com/120x60?text=LOGO+CLIENTE+1" alt="Logo Cliente 1" class="zen-logo-cliente">
-            <h4>Gigante do Varejo</h4>
-            <p><strong>O desafio:</strong> Milhões de clientes e dificuldade em dar atenção individualizada.</p>
-            <p><strong>A virada:</strong> Implementamos chatbots no WhatsApp para atendimento e campanhas de SMS ultra-segmentadas.</p>
-            <p class="zen-resultado">🚀 +40% Leads Qualificados</p>
-            <p class="zen-resultado">💰 -30% Custo no Atendimento</p>
-        </div>
-        <div class="zen-item">
-            <img src="https://via.placeholder.com/120x60?text=LOGO+CLIENTE+2" alt="Logo Cliente 2" class="zen-logo-cliente">
-            <h4>Líder em Serviços</h4>
-            <p><strong>O desafio:</strong> Leads esfriando no funil de vendas e processos manuais demais.</p>
-            <p><strong>A virada:</strong> Automação completa do fluxo de nutrição de leads e integração com CRM existente.</p>
-            <p class="zen-resultado">📈 +25% Taxa de Conversão</p>
-            <p class="zen-resultado">⏱️ -20% Tempo de Vendas</p>
-        </div>
-    </div>
-</section>
-""", unsafe_allow_html=True)
-
-# Solução Personalizada (o Coração da Prospecção - foco na empresa DELE)
-st.markdown(f"""
-<section class="zen-section personalized-solution">
-    <h3>{diretor_nome}, uma solução que a {empresa_dele} vai amar (e sentir no bolso)!</h3>
-    <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 30px auto; color: #444;">Pesquisamos a fundo o universo da <strong>{empresa_dele}</strong> e os desafios do setor de <strong>{segmento_empresa}</strong>. Com a Zenvia, a gente pode, juntos:</p>
-    <ul style="list-style: none; padding: 0; margin-top: 30px; text-align: left; font-size: 1.2em; color: #333; max-width: 700px; margin: 0 auto;">
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">✅</span> <strong>Multiplicar a captação de leads</strong>, focando em oportunidades que realmente se convertem nos seus produtos/serviços de SaaS e Comunicações Digitais.</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">✅</span> <strong>Blindar seu funil de vendas</strong>, garantindo que nenhum cliente em potencial se perca, otimizando cada etapa da jornada.</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">✅</span> <strong>Transformar clientes em fãs</strong> com experiências de comunicação pós-venda que geram lealdade e recompra (e depoimentos 5 estrelas!).</li>
-        <li><span style="color: {ZEN_BLUE_PRIMARY}; font-weight: 700; margin-right: 10px;">✅</span> **[Ponto Super Personalizado Aqui]:** Otimizar a jornada do cliente da {empresa_dele} desde o primeiro contato, garantindo que as ferramentas de marketing e vendas trabalhem em perfeita sintonia, aumentando a satisfação e o churn.</li>
-    </ul>
-    <p style="margin-top: 40px; text-align: center; font-size: 1.2em; color: #444;">Não é mágica, é inteligência Zenvia. Estamos prontos para mostrar como tudo isso se traduz em resultados reais para a <strong>{empresa_dele}</strong>.</p>
 </section>
 """, unsafe_allow_html=True)
 
 # Seção de Agendamento (Com Widget Integrado e CTA amigável)
 st.markdown('<section id="agendamento" class="zen-section agenda-section">', unsafe_allow_html=True)
 st.markdown(f"""
-    <h2>{diretor_nome}, vamos bater um papo sem compromisso?</h2>
-    <p style="font-size: 1.2em; margin-bottom: 30px; color: #555;">Seu tempo é ouro, e o nosso bate-papo de 15 minutinhos será recheado de insights e focado nos seus desafios. Escolha o melhor horário:</p>
+    <h2>{diretor_nome}, meu objetivo é simples: te mostrar um atalho para turbinar sua geração de demanda e atendimento, sem enrolação.</h2>
+    <p style="font-size: 1.2em; margin-bottom: 30px; color: #555;">Seu tempo é ouro, e nosso bate-papo de 15 minutos será recheado de insights e focados em seus desafios. Escolha o melhor horário:</p>
 """, unsafe_allow_html=True)
 
-# --- Opção 1: Embedar Calendly/HubSpot Meetings (Recomendado para o teste da Zenvia) ---
-# SUBSTITUA PELO SEU CÓDIGO EMBED DO CALENDLY/HUBSPOT MEETINGS!
-# É CRUCIAL que você configure seu link de agendamento lá e cole aqui.
-# Por exemplo, se seu link Calendly for https://calendly.com/minhamaria/15min
+# --- Embed do Calendly ---
+# LINK DO CALENDLY JÁ CONFIGURADO
 calendly_embed_code = f"""
-<div class="calendly-inline-widget" data-url="https://calendly.com/SEU_USUARIO/15min" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
+<div class="calendly-inline-widget" data-url="https://calendly.com/maarinnolasco" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
 """
-# Substitua a linha acima com o seu código de embed do Calendly ou HubSpot Meetings.
-# Exemplo (se você tiver o seu link do Calendly):
-# calendly_embed_code = f"""
-# <div class="calendly-inline-widget" data-url="https://calendly.com/SEU_USUARIO_DO_CALENDLY/15min-conversa" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
-# <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-# """
 
 st.markdown(calendly_embed_code, unsafe_allow_html=True)
-
 
 st.markdown(f"""
     <p style="margin-top: 50px; font-size: 1.1em; color: #555;">Prefere um contato mais direto, sem enrolação? Me chama no LinkedIn ou manda um e-mail:</p>
@@ -380,7 +300,6 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 st.markdown('</section>', unsafe_allow_html=True)
-
 
 # Footer
 st.markdown(f"""
