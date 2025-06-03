@@ -236,4 +236,58 @@ st.markdown(f"""
             <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Volume crescente de leads, mas conversão travada.</li>
             <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Equipes sobrecarregadas, processos manuais e pouco escaláveis.</li>
             <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Comunicação fragmentada entre marketing, vendas e atendimento.</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight:
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Ferramentas que não se conversam e dados soltos que viram gargalo.</li>
+        </ul>
+    </div>
+</section>
+""", unsafe_allow_html=True)
+
+# 💡 Nova Seção: Nossa Solução Integrada
+st.markdown(f"""
+<section class="zen-section">
+    <h2><span style="color: {HIGHLIGHT_COLOR};">💡</span> Nossa Solução Integrada</h2>
+    <div style="font-size: 1em; max-width: 800px; margin: 0 auto 30px auto; color: {SECTION_HIGHLIGHT_TEXT_COLOR};">
+        <p style="margin-bottom: 20px;">A Zenvia integra, automatiza e acelera a comunicação com seus clientes:</p>
+        <ul style="list-style: none; padding: 0; text-align: left;">
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Centralização de canais (WhatsApp, SMS, E-mail, Voz, RCS)</li>
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Geração e qualificação de leads com inteligência automatizada</li>
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Cadências comerciais personalizadas e rastreáveis</li>
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Redução do tempo de resposta com bots e automações</li>
+            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Visibilidade total da jornada do lead ao pós-venda</li>
+        </ul>
+    </div>
+</section>
+""", unsafe_allow_html=True)
+
+
+# Seção de Agendamento (Com Widget Integrado e CTA amigável)
+st.markdown('<section id="agendamento" class="zen-section agenda-section">', unsafe_allow_html=True)
+st.markdown(f"""
+    <h2 style="color: {HIGHLIGHT_COLOR};">{diretor_nome}, meu objetivo é simples: te mostrar um atalho para turbinar sua geração de demanda e atendimento, sem enrolação.</h2>
+    <p style="font-size: 1em; margin-bottom: 25px; color: {SECTION_HIGHLIGHT_TEXT_COLOR};">Seu tempo é ouro, e nosso bate-papo de 15 minutos será recheado de insights e focados em seus desafios. Escolha o melhor horário:</p>
+""", unsafe_allow_html=True)
+
+# --- Embed do Calendly ---
+calendly_embed_code = f"""
+<div class="calendly-inline-widget" data-url="https://calendly.com/maarinnolasco" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+"""
+
+st.markdown(calendly_embed_code, unsafe_allow_html=True)
+
+st.markdown(f"""
+    <p class="contact-text" style="margin-top: 30px;">Prefere um contato mais direto, sem enrolação? Me chama no LinkedIn ou manda um e-mail:</p>
+    <p class="contact-links" style="font-weight: 600; margin-top: 10px;">
+        <a href="{seu_linkedin_url}" target="_blank">Meu LinkedIn</a> | <a href="mailto:{seu_email}">{seu_email}</a>
+    </p>
+""", unsafe_allow_html=True)
+
+st.markdown('</section>', unsafe_allow_html=True)
+
+# Footer
+st.markdown(f"""
+<div class="zen-footer">
+    <p>Criado com paixão e inteligência por {seu_nome}. 😉</p>
+    <p>&copy; 2025 Zenvia. Todos os direitos reservados. | Este conteúdo faz parte de um desafio de prospecção.</p>
+</div>
+""", unsafe_allow_html=True)
