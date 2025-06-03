@@ -208,45 +208,6 @@ st.markdown(f"""
 st.markdown(f"""
 <section class="zen-section">
     <h2><span style="color: {HIGHLIGHT_COLOR};">🧠</span> Problema: Você já deve ter vivido isso...</h2>
-    <div style="font-size: 1.2em; max-width: 800px; margin: 0 auto 40px auto; color: {BACKGROUND_COLOR};"> {/* Cor do texto dentro da seção branca */}
+    <div style="font-size: 1.2em; max-width: 800px; margin: 0 auto 40px auto; color: {BACKGROUND_COLOR};">
         <ul style="list-style: none; padding: 0; text-align: left;">
-            <li style="margin-bottom: 15px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Volume crescente de leads, mas conversão travada.</li>
-            <li style="margin-bottom: 15px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Equipes sobrecarregadas, processos manuais e pouco escaláveis.</li>
-            <li style="margin-bottom: 15px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Comunicação fragmentada entre marketing, vendas e atendimento.</li>
-            <li style="margin-bottom: 15px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Ferramentas que não se conversam e dados soltos que viram gargalo.</li>
-        </ul>
-    </div>
-</section>
-""", unsafe_allow_html=True)
-
-# Seção de Agendamento (Com Widget Integrado e CTA amigável)
-st.markdown('<section id="agendamento" class="zen-section agenda-section">', unsafe_allow_html=True)
-st.markdown(f"""
-    <h2 style="color: {HIGHLIGHT_COLOR};">{diretor_nome}, meu objetivo é simples: te mostrar um atalho para turbinar sua geração de demanda e atendimento, sem enrolação.</h2>
-    <p style="font-size: 1.2em; margin-bottom: 30px; color: {BACKGROUND_COLOR};">Seu tempo é ouro, e nosso bate-papo de 15 minutos será recheado de insights e focados em seus desafios. Escolha o melhor horário:</p>
-""", unsafe_allow_html=True)
-
-# --- Embed do Calendly ---
-calendly_embed_code = f"""
-<div class="calendly-inline-widget" data-url="https://calendly.com/maarinnolasco" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-"""
-
-st.markdown(calendly_embed_code, unsafe_allow_html=True)
-
-st.markdown(f"""
-    <p style="margin-top: 50px; font-size: 1.1em; color: {BACKGROUND_COLOR};">Prefere um contato mais direto, sem enrolação? Me chama no LinkedIn ou manda um e-mail:</p>
-    <p style="font-size: 1.2em; font-weight: 600; margin-top: 15px;">
-        <a href="{seu_linkedin_url}" target="_blank" style="color: {HIGHLIGHT_COLOR}; text-decoration: none;">Meu LinkedIn</a> | <a href="mailto:{seu_email}" style="color: {HIGHLIGHT_COLOR}; text-decoration: none;">{seu_email}</a>
-    </p>
-""", unsafe_allow_html=True)
-
-st.markdown('</section>', unsafe_allow_html=True)
-
-# Footer
-st.markdown(f"""
-<div class="zen-footer">
-    <p>Criado com paixão e inteligência por {seu_nome}. 😉</p>
-    <p>&copy; 2025 Zenvia. Todos os direitos reservados. | Este conteúdo é parte de um desafio de prospecção.</p>
-</div>
-""", unsafe_allow_html=True)
+            <li style="margin-bottom: 15px;"><span style="color: {HIGHLIGHT_COLOR};
