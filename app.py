@@ -1,12 +1,11 @@
 import streamlit as st
 
-# Cores Personalizadas (AJUSTADO PARA BRANCO NOS TEXTOS E CONTRASTE NAS SEÇÕES)
-BACKGROUND_COLOR = "#993399" # Roxão principal
-HIGHLIGHT_COLOR = "#007AFF" # Azul vibrante (para destaques como títulos, links)
-TEXT_COLOR = "#FFFFFF" # Branco (para textos no fundo roxo)
-SECTION_BG_COLOR = "#FFFFFF" # Fundo das seções internas (Problema, Solução, Agendamento)
-SECTION_HIGHLIGHT_TEXT_COLOR = "#333333" # Cor dos textos dentro das seções internas (para contraste no fundo branco)
-LIGHT_BACKGROUND_HIGHLIGHT = "#B366B3" # Um roxo mais claro (se precisar de uma seção com fundo roxo mais claro)
+# Cores Personalizadas (AJUSTADAS CONFORME SUAS ÚLTIMAS INSTRUÇÕES)
+BACKGROUND_COLOR = "#1A2D40" # Novo Azul Noite/Escuro (padrão Zenvia)
+HIGHLIGHT_COLOR = "#007AFF" # Azul vibrante (para ícones, links, sublinhados)
+TEXT_COLOR = "#FFFFFF" # Branco (PARA TODOS OS TEXTOS)
+SECTION_BG_COLOR = "#2C3E50" # Novo Fundo das seções internas (Cinza/Azul Escuro para contraste com texto branco)
+BUTTON_COLOR = "#993399" # Roxo para o botão de agendamento (o roxo original)
 
 st.set_page_config(
     page_title="Zenvia: Sua Próxima Conversa com o Crescimento!",
@@ -22,10 +21,10 @@ def set_custom_style():
         
         html, body, [data-testid="stAppViewContainer"] {{
             font-family: 'Montserrat', sans-serif;
-            color: {TEXT_COLOR}; /* Texto principal em branco */
-            background-color: {BACKGROUND_COLOR}; /* Fundo roxo */
+            color: {TEXT_COLOR}; /* TODOS OS TEXTOS PADRÃO EM BRANCO */
+            background-color: {BACKGROUND_COLOR}; /* Fundo azul noite */
             line-height: 1.6;
-            font-size: 14px; /* Tamanho base dos textos, levemente menor */
+            font-size: 14px; /* Tamanho base dos textos */
         }}
         
         /* Remove paddings e margens padrão do Streamlit para maior controle */
@@ -38,32 +37,35 @@ def set_custom_style():
         .css-vk325g {{ display: none !important; }}
         header[data-testid="stHeader"] {{ display: none !important; }}
         
+        /* Estilo para o logo "capa horizontal" */
         .zen-header {{
-            background-color: {BACKGROUND_COLOR};
-            padding: 5px 15px; /* Bem pequeno para o logo */
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-        }}
-        .zen-logo {{
-            max-width: 60px; /* Logo miniatura */
+            background-color: {BACKGROUND_COLOR}; /* Cor de fundo do header */
+            padding: 0; /* Zero padding para o logo preencher */
+            width: 100%;
             height: auto;
-            margin-left: 0; /* Cola na borda esquerda */
+            overflow: hidden; /* Garante que nada vaze */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            min-height: 80px; /* Altura mínima para o logo aparecer bem */
+        }}
+        .zen-header img {{
+            width: 100%; /* Logo cobrindo toda a largura */
+            max-height: 150px; /* Limita a altura do logo para não ficar gigante */
+            display: block; /* Remove espaços extras */
+            object-fit: cover; /* Faz a imagem cobrir o espaço, cortando se necessário */
+            object-position: center; /* Centraliza a imagem no espaço */
         }}
         
         .zen-hero {{
-            background-color: {HIGHLIGHT_COLOR};
+            background-color: {HIGHLIGHT_COLOR}; /* Fundo azul vibrante para a hero */
             color: {TEXT_COLOR};
-            padding: 50px 20px; /* Padding reduzido da hero */
+            padding: 50px 20px;
             text-align: center;
             background-image: linear-gradient(to right, {HIGHLIGHT_COLOR}, #0056b3);
             border-radius: 0 0 15px 15px;
             margin-bottom: 30px;
         }}
         .zen-hero h1 {{
-            font-size: 2.0em; /* Relativo à base de 14px -> 28px */
+            font-size: 2.0em; /* 2.0 * 14px = 28px */
             margin-bottom: 10px;
             font-weight: 700;
             line-height: 1.2;
@@ -79,9 +81,9 @@ def set_custom_style():
         }}
         .zen-btn-schedule {{
             display: inline-block;
-            background-color: {HIGHLIGHT_COLOR};
+            background-color: {BUTTON_COLOR}; /* Botão na cor roxa */
             color: {TEXT_COLOR}; /* Texto do botão em branco */
-            padding: 12px 25px; /* Ajusta padding para texto menor */
+            padding: 12px 25px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -90,26 +92,28 @@ def set_custom_style():
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }}
         .zen-btn-schedule:hover {{
-            background-color: #00c853; /* Um verde para hover do botão */
+            background-color: #7A2E7A; /* Roxo mais escuro no hover */
             transform: translateY(-3px);
         }}
         
         .zen-section {{
-            padding: 35px 30px; /* Reduz padding das seções */
-            background-color: {SECTION_BG_COLOR};
+            padding: 35px 30px;
+            background-color: {SECTION_BG_COLOR}; /* Fundo das seções internas agora é escuro */
             margin: 20px auto;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
             max-width: 900px;
-            color: {SECTION_HIGHLIGHT_TEXT_COLOR}; /* Texto das seções internas em tom escuro para contraste */
+            color: {TEXT_COLOR}; /* Texto das seções internas em branco */
         }}
-        .zen-section.bg-light {{ /* Para seções com fundo roxo claro, se existirem */
-            background-color: {LIGHT_BACKGROUND_HIGHLIGHT};
-            color: {TEXT_COLOR}; /* Texto em branco */
+        .zen-section h2, .zen-section h3 {{ /* Títulos dentro das seções internas */
+            color: {TEXT_COLOR}; /* Títulos em branco */
         }}
+        .zen-section h2 span, .zen-section h3 span {{ /* Ícones dentro dos títulos (Problema, Solução) */
+            color: {HIGHLIGHT_COLOR}; /* Ícones em azul vibrante */
+        }}
+
         h2 {{
             font-size: 1.6em; /* 1.6 * 14px = 22.4px */
-            color: {HIGHLIGHT_COLOR};
             text-align: center;
             margin-bottom: 25px;
             font-weight: 700;
@@ -118,50 +122,50 @@ def set_custom_style():
         h2::after {{
             content: '';
             display: block;
-            width: 50px; /* Linha abaixo H2 menor */
+            width: 50px;
             height: 2px;
-            background-color: {HIGHLIGHT_COLOR};
+            background-color: {HIGHLIGHT_COLOR}; /* Linha em azul vibrante */
             margin: 8px auto 0;
             border-radius: 1px;
         }}
         h3 {{ /* Para a nova seção "Solução Integrada" */
             font-size: 1.4em; /* 1.4 * 14px = 19.6px */
-            color: {HIGHLIGHT_COLOR};
-            margin-bottom: 15px;
             text-align: center;
+            margin-bottom: 15px;
             font-weight: 700;
         }}
         
         /* Ajuste para parágrafos e listas dentro das seções */
         .zen-section p, .zen-section ul, .zen-section li {{
             font-size: 1em; /* 14px */
-            color: {SECTION_HIGHLIGHT_TEXT_COLOR}; /* Garante texto escuro nas seções brancas */
+            color: {TEXT_COLOR}; /* Garante texto branco nas seções escuras */
         }}
         .zen-section ul li {{
-            margin-bottom: 8px; /* Reduz espaçamento entre itens da lista */
+            margin-bottom: 8px;
         }}
-        .zen-section ul li span {{ /* Ajusta cor dos bullets */
-            color: {HIGHLIGHT_COLOR};
+        .zen-section ul li span {{ /* Estilo para os ícones de checkmark/bullets */
+            color: {HIGHLIGHT_COLOR}; /* Ícones em azul vibrante */
         }}
 
         .zen-footer {{
             background-color: {BACKGROUND_COLOR};
             color: {TEXT_COLOR}; /* Texto do footer em branco */
             text-align: center;
-            padding: 25px 20px; /* Reduz padding do footer */
-            font-size: 0.9em; /* Levemente menor que o base -> 12.6px */
+            padding: 25px 20px;
+            font-size: 0.9em; /* 0.9 * 14px = 12.6px */
             margin-top: 30px;
         }}
         .zen-footer a {{
-            color: {HIGHLIGHT_COLOR};
+            color: {HIGHLIGHT_COLOR}; /* Links do footer em azul vibrante */
             text-decoration: none;
         }}
         .zen-footer a:hover {{
             text-decoration: underline;
         }}
         
+        /* Links em geral, Streamlit markdown pode aplicar isso */
         .st-markdown a {{
-            color: {HIGHLIGHT_COLOR};
+            color: {HIGHLIGHT_COLOR}; /* Links em azul vibrante */
             text-decoration: none;
             font-weight: 600;
         }}
@@ -172,30 +176,41 @@ def set_custom_style():
         /* Para o texto de contato direto no agendamento */
         .contact-text {{
             font-size: 1em; /* 14px */
-            color: {SECTION_HIGHLIGHT_TEXT_COLOR}; /* Texto escuro na seção branca */
+            color: {TEXT_COLOR}; /* Texto branco na seção escura */
         }}
         .contact-links a {{
             font-size: 1.1em; /* Um pouco maior para links de contato */
-            color: {HIGHLIGHT_COLOR};
+            color: {HIGHLIGHT_COLOR}; /* Links de contato em azul vibrante */
         }}
-
 
         html {{ scroll-behavior: smooth; }}
 
-        .calendly-inline-widget {{
+        /* Estilo para o container do iframe do Calendly */
+        .calendly-container {{
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            margin: 25px auto; /* Reduz margin do calendly */
+            margin: 25px auto;
+            width: 100%; /* Ocupa a largura total da seção */
+            max-width: 800px; /* Limita a largura para telas maiores */
         }}
+        .calendly-container iframe {{
+            width: 100%;
+            height: 700px; /* Altura do Calendly */
+            border: none;
+            background-color: white; /* Garante que o iframe tenha um fundo branco para o Calendly */
+        }}
+
         @media (max-width: 768px) {{
-            .zen-hero h1 {{ font-size: 1.6em; }} /* 1.6 * 14px = 22.4px */
-            .zen-hero p {{ font-size: 0.9em; }} /* 0.9 * 14px = 12.6px */
-            h2 {{ font-size: 1.3em; }} /* 1.3 * 14px = 18.2px */
+            .zen-hero h1 {{ font-size: 1.6em; }}
+            .zen-hero p {{ font-size: 0.9em; }}
+            h2 {{ font-size: 1.3em; }}
             .zen-btn-schedule {{ padding: 10px 20px; font-size: 0.9em; }}
             .zen-section {{ padding: 20px 15px; }}
-            .zen-logo {{ max-width: 50px; }} /* Logo ainda menor em mobile */
-            .zen-footer {{ font-size: 0.8em; }} /* Footer menor em mobile */
+            .zen-header img {{ max-width: 100%; height: auto; }}
+            .zen-footer {{ font-size: 0.8em; }}
+            .calendly-container {{ margin: 15px auto; }}
+            .calendly-container iframe {{ height: 600px; }}
         }}
     </style>
     """, unsafe_allow_html=True)
@@ -211,10 +226,10 @@ seu_nome = "Maria Leticia Sousa"
 
 # --- Layout da One Page ---
 
-# Header com o novo logo e posicionamento
+# Header com o logo "capa horizontal"
 st.markdown(f"""
 <div class="zen-header">
-    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4e9f4f212905251.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Logo da Empresa" class="zen-logo">
+    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/4e9f4f212905251.Y3JvcCw4MDgsNjMyLDAsMA.png" alt="Logo da Empresa">
 </div>
 """, unsafe_allow_html=True)
 
@@ -225,69 +240,3 @@ st.markdown(f"""
     <p>Soluções multicanal para escalar o relacionamento com leads e clientes sem perder agilidade, personalização e performance.</p>
     <a href="#agendamento" class="zen-btn-schedule">SEU MELHOR HORÁRIO PARA UM BATE-PAPO</a>
 </div>
-""", unsafe_allow_html=True)
-
-# 🧠 2. Problema
-st.markdown(f"""
-<section class="zen-section">
-    <h2><span style="color: {HIGHLIGHT_COLOR};">🧠</span> Problema: Você já deve ter vivido isso...</h2>
-    <div style="font-size: 1em; max-width: 800px; margin: 0 auto 30px auto; color: {SECTION_HIGHLIGHT_TEXT_COLOR};">
-        <ul style="list-style: none; padding: 0; text-align: left;">
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Volume crescente de leads, mas conversão travada.</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Equipes sobrecarregadas, processos manuais e pouco escaláveis.</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Comunicação fragmentada entre marketing, vendas e atendimento.</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">•</span> Ferramentas que não se conversam e dados soltos que viram gargalo.</li>
-        </ul>
-    </div>
-</section>
-""", unsafe_allow_html=True)
-
-# 💡 Nova Seção: Nossa Solução Integrada
-st.markdown(f"""
-<section class="zen-section">
-    <h2><span style="color: {HIGHLIGHT_COLOR};">💡</span> Nossa Solução Integrada</h2>
-    <div style="font-size: 1em; max-width: 800px; margin: 0 auto 30px auto; color: {SECTION_HIGHLIGHT_TEXT_COLOR};">
-        <p style="margin-bottom: 20px;">A Zenvia integra, automatiza e acelera a comunicação com seus clientes:</p>
-        <ul style="list-style: none; padding: 0; text-align: left;">
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Centralização de canais (WhatsApp, SMS, E-mail, Voz, RCS)</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Geração e qualificação de leads com inteligência automatizada</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Cadências comerciais personalizadas e rastreáveis</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Redução do tempo de resposta com bots e automações</li>
-            <li style="margin-bottom: 10px;"><span style="color: {HIGHLIGHT_COLOR}; font-weight: 700; margin-right: 10px;">✅</span> Visibilidade total da jornada do lead ao pós-venda</li>
-        </ul>
-    </div>
-</section>
-""", unsafe_allow_html=True)
-
-
-# Seção de Agendamento (Com Widget Integrado e CTA amigável)
-st.markdown('<section id="agendamento" class="zen-section agenda-section">', unsafe_allow_html=True)
-st.markdown(f"""
-    <h2 style="color: {HIGHLIGHT_COLOR};">{diretor_nome}, meu objetivo é simples: te mostrar um atalho para turbinar sua geração de demanda e atendimento, sem enrolação.</h2>
-    <p style="font-size: 1em; margin-bottom: 25px; color: {SECTION_HIGHLIGHT_TEXT_COLOR};">Seu tempo é ouro, e nosso bate-papo de 15 minutos será recheado de insights e focados em seus desafios. Escolha o melhor horário:</p>
-""", unsafe_allow_html=True)
-
-# --- Embed do Calendly ---
-calendly_embed_code = f"""
-<div class="calendly-inline-widget" data-url="https://calendly.com/maarinnolasco" style="min-width:320px;height:700px; border-radius: 12px; overflow: hidden;"></div>
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-"""
-
-st.markdown(calendly_embed_code, unsafe_allow_html=True)
-
-st.markdown(f"""
-    <p class="contact-text" style="margin-top: 30px;">Prefere um contato mais direto, sem enrolação? Me chama no LinkedIn ou manda um e-mail:</p>
-    <p class="contact-links" style="font-weight: 600; margin-top: 10px;">
-        <a href="{seu_linkedin_url}" target="_blank">Meu LinkedIn</a> | <a href="mailto:{seu_email}">{seu_email}</a>
-    </p>
-""", unsafe_allow_html=True)
-
-st.markdown('</section>', unsafe_allow_html=True)
-
-# Footer
-st.markdown(f"""
-<div class="zen-footer">
-    <p>Criado com paixão e inteligência por {seu_nome}. 😉</p>
-    <p>&copy; 2025 Zenvia. Todos os direitos reservados. | Este conteúdo faz parte de um desafio de prospecção.</p>
-</div>
-""", unsafe_allow_html=True)
